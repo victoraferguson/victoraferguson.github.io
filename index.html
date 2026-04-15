@@ -245,13 +245,14 @@
 
   header .inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.75rem;
   }
 
   header nav {
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   header nav a {
@@ -259,8 +260,14 @@
   }
 
   .home-bio {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1.5rem;
+    align-items: center;
+  }
+
+  .home-bio-text {
+    width: 100%;
+    text-align: left;
   }
 
   .home-photo {
@@ -317,6 +324,10 @@
       <p>I am an Assistant Professor at Hitotsubashi University's Graduate School of Law and a Visiting Researcher at the University of Tokyo's Research Centre for Advanced Science and Technology.</p>
       <p>I received my PhD from the School of Politics and International Relations at the Australian National University's Research School of Social Sciences. Prior to joining Hitotsubashi, I was a JSPS Postdoctoral Research Fellow at the University of Tokyo.</p>
       <p>I was born and raised in Melbourne. In my spare time I enjoy hiking, travelling by train or bicycle, and East Asian cinema. The Mingeikan is my favourite museum in Tokyo.</p>
+      <figure style="margin-top: 2rem;">
+        <img src="aboutphoto.jpg" alt="Iide Mountains" style="width: 100%; border-radius: 3px; display: block;">
+        <figcaption style="margin-top: 0.5rem; font-size: 13px; color: #666; text-align: center;">Iide Mountains (飯豊連峰), border of Fukushima, Niigata and Yamagata Prefectures</figcaption>
+      </figure>
     </div>
   </div>
 </div>
