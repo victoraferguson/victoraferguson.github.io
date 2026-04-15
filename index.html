@@ -235,28 +235,45 @@
 
     /* ── Responsive ── */
     @media (max-width: 600px) {
-      .inner {
-        padding: 0 1.5rem;
-      }
+  .inner {
+    padding: 0 1.25rem;
+  }
 
-      header {
-        padding: 1.25rem 0;
-      }
+  header {
+    padding: 1rem 0;
+  }
 
-      header nav {
-        gap: 1.25rem;
-      }
+  header .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
 
-      .home-bio {
-        flex-direction: column-reverse;
-        gap: 1.5rem;
-      }
+  header nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
 
-      .home-photo img {
-        width: 120px;
-        height: 150px;
-      }
-    }
+  header nav a {
+    font-size: 13px;
+  }
+
+  .home-bio {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .home-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .home-photo img {
+    width: 130px;
+    height: 165px;
+  }
+}
   </style>
 </head>
 <body>
