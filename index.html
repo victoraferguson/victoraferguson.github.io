@@ -118,41 +118,41 @@
     }
 
     .home-bio-text p {
-  font-size: 15px;
-  line-height: 1.85;
-  margin-bottom: 1rem;
-  text-align: justify;
-}
+      font-size: 15px;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
 
     .home-bio-text p:last-child {
       margin-bottom: 0;
     }
 
-   .home-bio-text a {
-  color: #111;
-  text-decoration: underline;
-  text-decoration-color: #aaa;
-  text-underline-offset: 2px;
-}
+    .home-bio-text a {
+      color: #111;
+      text-decoration: underline;
+      text-decoration-color: #aaa;
+      text-underline-offset: 2px;
+    }
 
-.home-bio-text a:hover {
-  color: #555;
-}
+    .home-bio-text a:hover {
+      color: #555;
+    }
 
-.about-text a {
-  color: #111;
-  text-decoration: underline;
-  text-decoration-color: #aaa;
-  text-underline-offset: 2px;
-}
+    .about-text a {
+      color: #111;
+      text-decoration: underline;
+      text-decoration-color: #aaa;
+      text-underline-offset: 2px;
+    }
 
-.about-text a:hover {
-  color: #555;
-}
+    .about-text a:hover {
+      color: #555;
+    }
 
     .home-photo img {
-  width: 120px;
-  height: 152px;
+      width: 120px;
+      height: 152px;
       object-fit: cover;
       object-position: top;
       border-radius: 3px;
@@ -161,11 +161,11 @@
 
     /* ── About ── */
     .about-text p {
-  font-size: 15px;
-  line-height: 1.85;
-  margin-bottom: 1rem;
-  text-align: justify;
-}
+      font-size: 15px;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
 
     .about-text p:last-child {
       margin-bottom: 0;
@@ -190,15 +190,20 @@
 
     .paper .venue {
       font-size: 13.5px;
-      color: #333;
+      color: #555;
       margin-top: 0.1rem;
+    }
+
+    .paper .venue em {
+      color: #333;
+      font-style: italic;
     }
 
     .paper .links {
       margin-top: 0.4rem;
       font-size: 13px;
       display: flex;
-      gap: 0.6rem;
+      gap: 0.5rem;
       flex-wrap: wrap;
       align-items: center;
     }
@@ -219,10 +224,11 @@
       font-size: 13px;
     }
 
-    .toggle-link::before { content: '['; }
-    .toggle-link::after  { content: ']'; }
-    .ext-link::before    { content: '['; }
-    .ext-link::after     { content: ']'; }
+    .toggle-link, .ext-link {
+      border: 1px dotted #aaa;
+      border-radius: 3px;
+      padding: 1px 5px;
+    }
 
     .abstract-box {
       background: #f9f9f7;
@@ -247,52 +253,52 @@
 
     /* ── Responsive ── */
     @media (max-width: 600px) {
-  .inner {
-    padding: 0 1.25rem;
-  }
+      .inner {
+        padding: 0 1.25rem;
+      }
 
-  header {
-    padding: 1rem 0;
-  }
+      header {
+        padding: 1rem 0;
+      }
 
-  header .inner {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.75rem;
-  }
+      header .inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
 
-  header nav {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+      header nav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
-  header nav a {
-    font-size: 13px;
-  }
+      header nav a {
+        font-size: 13px;
+      }
 
-  .home-bio {
-    flex-direction: column-reverse;
-    gap: 1.5rem;
-    align-items: center;
-  }
+      .home-bio {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        align-items: center;
+      }
 
-  .home-bio-text {
-    width: 100%;
-    text-align: left;
-  }
+      .home-bio-text {
+        width: 100%;
+        text-align: left;
+      }
 
-  .home-photo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
+      .home-photo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
 
-  .home-photo img {
-    width: 130px;
-    height: 165px;
-  }
-}
+      .home-photo img {
+        width: 130px;
+        height: 165px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -334,10 +340,10 @@
   <div class="inner">
     <div class="about-text">
       <p>I am an Assistant Professor at Hitotsubashi University's <a href="https://hri.ad.hit-u.ac.jp/html/100002372_profile_ja.html" target="_blank">Graduate School of Law</a> and a Visiting Researcher at the University of Tokyo's <a href="https://esil.rcast.u-tokyo.ac.jp/experts/victor-ferguson/?" target="_blank">Research Centre for Advanced Science and Technology</a>.</p>
-      <p>I received my PhD from the School of Politics and International Relations at the Australian National University's <a href="https://rsss.cass.anu.edu.au/">Research School of Social Sciences</a>. Prior to joining Hitotsubashi, I was a JSPS Postdoctoral Research Fellow at the University of Tokyo.</p>
-      <p>I was born and raised in Melbourne. In my spare time I enjoy hiking, travelling by train or bicycle, and East Asian cinema. The <a href="https://mingeikan.or.jp/">Mingeikan</a> is my favourite museum in Tokyo.</p>
+      <p>I received my PhD from the School of Politics and International Relations at the Australian National University's <a href="https://rsss.cass.anu.edu.au/" target="_blank">Research School of Social Sciences</a>. Prior to joining Hitotsubashi, I was a JSPS Postdoctoral Research Fellow at the University of Tokyo.</p>
+      <p>I was born and raised in Melbourne. In my spare time I enjoy hiking, travelling by train or bicycle, and East Asian cinema. The <a href="https://mingeikan.or.jp/" target="_blank">Mingeikan</a> is my favourite museum in Tokyo.</p>
       <figure style="margin-top: 2rem;">
-<img src="aboutphoto.jpg" alt="Iide Mountains" style="width: 90%; border-radius: 3px; display: block; margin: 0 auto;">
+        <img src="aboutphoto.jpg" alt="Iide Mountains" style="width: 90%; border-radius: 3px; display: block; margin: 0 auto;">
         <figcaption style="margin-top: 0.5rem; font-size: 13px; color: #666; text-align: center;">Iide Mountains (飯豊連峰), border of Fukushima, Niigata and Yamagata Prefectures</figcaption>
       </figure>
     </div>
@@ -352,7 +358,7 @@
       <div class="ptitle">Sanction-busting Shoppers? Consumer Buycotts and the Impact of Economic Sanctions</div>
       <div class="venue"><em>Review of International Political Economy</em>, accepted (with <a href="https://sites.google.com/a/georgetown.edu/christina-lai/home" target="_blank">C Lai</a>)</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub10')">abstract</span>
+        <span class="toggle-link" onclick="toggle('pub10')">Abstract</span>
       </div>
       <div class="abstract-box" id="pub10">Under what conditions will consumers support domestic industries targeted by economic sanctions? A growing body of literature examines how sanctions may generate nationalist boycotts in which consumers punish companies from sanctioning states, yet much less is known about the opposite behaviour: 'buycotts', where consumers express goodwill toward sanctioned industries. Extending research that investigates how the actions of market actors condition sanctions impacts, we conceptualize consumer buycotts as a mediating variable in the sanctioning process. Synthesizing insights from the IPE literature on boycotts and marketing science research on domestic buycotts, we specify empirical expectations about dynamics that may shape buycott participation during sanctions episodes and probe their plausibility through case studies of responses to sanctions imposed by China on Australia, Taiwan, and Japan. We find buycotts may meaningfully mediate sanction impacts, but that the effect depends on factors conditioning participation. Participation appears highest when products are promoted by elites, publicly consumed, and have high demand elasticity, but declines over time and as more products face sanctions. We also identify key theoretical distinctions between buycotts and boycotts, and use our findings to begin inductively theorising buycotts as a defensive instrument of economic statecraft, with implications for policy debates about countering economic coercion.</div>
     </div>
@@ -361,9 +367,9 @@
       <div class="ptitle">The Old Logic Behind China's New Economic Weapons</div>
       <div class="venue"><em>The Washington Quarterly</em> (2025) 48:3 (with <a href="https://scholar.google.com/citations?user=n_EjiOYAAAAJ&hl=sv" target="_blank">V Bohman</a>, <a href="https://www.audryewong.com/" target="_blank">A Wong</a>)</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub9b')">abstract</span>
-        <a class="ext-link" href="https://doi.org/10.1080/0163660X.2025.2554476" target="_blank">publisher's version</a>
-        <a class="ext-link" href="https://www.chinasanctionsmonitor.com/" target="_blank">data</a>
+        <span class="toggle-link" onclick="toggle('pub9b')">Abstract</span>
+        <a class="ext-link" href="https://doi.org/10.1080/0163660X.2025.2554476" target="_blank">Publisher's Version (Open Access)</a>
+        <a class="ext-link" href="https://www.chinasanctionsmonitor.com/" target="_blank">Data</a>
       </div>
       <div class="abstract-box" id="pub9b">When, how, and why does China use economic sanctions? No aspect of China's foreign economic policy has received as much attention over the past few years as its use of coercive trade restrictions. In the space of a decade, increasingly bold actions by Beijing to punish foreign actors that crossed its red lines, together with renewed attention to the potentially negative effects of economic interdependence on national security, have led to a surge of academic and policy analyses. The most recent wave of this work converges around one central narrative: whereas China's early forays into economic coercion were characterized by caution and relied on obscure sanctions that could plausibly be denied, since 2018 it has developed a suite of sophisticated "new economic weapons" anchored in official Chinese laws and regulations that it has begun to openly and proactively deploy. To understand how China's sanctions policy is evolving, it is necessary to situate its new legal tools in relation to its older sanctions methods—something previous work has failed to do. To fill this gap, we introduce a new dataset that documents over 200 individual sanctions imposed by China between 2010 and 2025, allowing us to trace patterns in when and how Beijing has employed both formal and informal economic restrictions over time. Drawing on this dataset as well as Chinese language sources, we make two arguments. First, contrary to the narrative that China's sanctioning is becoming uniformly more formal and aggressive, we argue that its behavior has become less—not more—proactive in recent years. Second, China's new economic weapons have thus far complemented rather than replaced its informal toolkit. Even when it uses legal sanctions, China's style of sanctioning still fundamentally diverges from that of democracies. Rather than adopting the predictable legal frameworks characteristic of rule-of-law systems, Beijing's actions continue to reflect an old logic marked by extensive state discretion and persistent uncertainty surrounding both the enforcement of sanctions and the demands tied to them.</div>
     </div>
@@ -372,9 +378,9 @@
       <div class="ptitle">Putting Your Money Where Your Mouth Is Not: China and Russia's Implementation of Economic Sanctions</div>
       <div class="venue"><em>Journal of Global Security Studies</em> (2025) 10:3</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub9')">abstract</span>
-        <a class="ext-link" href="https://doi.org/10.1093/jogss/ogaf010" target="_blank">publisher's version</a>
-        <a class="ext-link" href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/jogss/10/3/10.1093_jogss_ogaf010/1/ogaf010_supplemental_file.pdf?Expires=1779278719&Signature=4O-Pi565cfrMYOnzRqKH~rb5KsOuq3kOZyGRa8Q3Iqb-ejFsb5d7DByV1KoSDaHCcCphKHnoxKqgjIgoe0IprhOBAsVcMQYOYlCYwWmVfKr6c93oVshVYRa2mEtz5eoGwisyDHi57X8eYcMPfgtppTicZQtuKr~s7GppH09f2Qj24a4h5fHhKESKM7HeYh9H-h0v5k3xGHRcun6lhDXrYZIJU9HUTIsbXzno4cgXTDLSmiUflaEiznCYRvYmxbtYznTpWg4rXyZy9lKB4xqH7wpb5LFBg6t2UY6xie55sdeykASPsc9GLl-s9-MwBUP7V1tlghbycG2ThnvOg-Zh0A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" target="_blank">data</a>
+        <span class="toggle-link" onclick="toggle('pub9')">Abstract</span>
+        <a class="ext-link" href="https://doi.org/10.1093/jogss/ogaf010" target="_blank">Publisher's Version (Open Access)</a>
+        <a class="ext-link" href="https://oup.silverchair-cdn.com/oup/backfile/Content_public/Journal/jogss/10/3/10.1093_jogss_ogaf010/1/ogaf010_supplemental_file.pdf?Expires=1779278719&Signature=4O-Pi565cfrMYOnzRqKH~rb5KsOuq3kOZyGRa8Q3Iqb-ejFsb5d7DByV1KoSDaHCcCphKHnoxKqgjIgoe0IprhOBAsVcMQYOYlCYwWmVfKr6c93oVshVYRa2mEtz5eoGwisyDHi57X8eYcMPfgtppTicZQtuKr~s7GppH09f2Qj24a4h5fHhKESKM7HeYh9H-h0v5k3xGHRcun6lhDXrYZIJU9HUTIsbXzno4cgXTDLSmiUflaEiznCYRvYmxbtYznTpWg4rXyZy9lKB4xqH7wpb5LFBg6t2UY6xie55sdeykASPsc9GLl-s9-MwBUP7V1tlghbycG2ThnvOg-Zh0A__&Key-Pair-Id=APKAIE5G5CRDK6RD3PGA" target="_blank">Data</a>
       </div>
       <div class="abstract-box" id="pub9">How do China and Russia practically wield coercive economic power? Both states frequently employ unilateral sanctions. Simultaneously, they regularly communicate to domestic and international audiences that they vehemently oppose them. This duality typically limits their sanctions toolbox to trade restrictions that can be plausibly denied. Through what mechanisms can deniable sanctions be implemented, and what does this imply about the nature of target vulnerability to China and Russia's sanctions? Sanctions scholarship focuses on Western sender states and assumes sanctions are announced publicly and introduced via transparent policy instruments. It gives only limited consideration to how authoritarian states introduce more discreet economic restrictions. Existing knowledge of how states implement deniable sanctions stems from single case studies and is undertheorized. This article seeks to address those gaps. Empirically, it introduces a new qualitative dataset of 103 sanctions episodes occurring between 2000 and 2023 (China: 53; Russia: 50) and uses it to put the two states' approaches in comparative perspective. Theoretically, leveraging within- and cross-case comparisons of the implementation of almost 300 separate sanctions, it maps out six distinct mechanisms and their dynamics. In doing so, it presents a new account of China and Russia's sanctioning behavior with implications for policy debates about countering their economic coercion.</div>
     </div>
@@ -383,8 +389,8 @@
       <div class="ptitle">Between Market and State: The Evolution of Australia's Economic Statecraft</div>
       <div class="venue"><em>The Pacific Review</em> (2023) 36:5 (with <a href="https://researchportalplus.anu.edu.au/en/persons/darren-lim/" target="_blank">D Lim</a>, B Herscovitch)</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub8')">abstract</span>
-        <a class="ext-link" href="https://www.tandfonline.com/doi/full/10.1080/09512748.2023.2200026" target="_blank">publisher's version</a>
+        <span class="toggle-link" onclick="toggle('pub8')">Abstract</span>
+        <a class="ext-link" href="https://www.tandfonline.com/doi/full/10.1080/09512748.2023.2200026" target="_blank">Publisher's Version (Open Access)</a>
       </div>
       <div class="abstract-box" id="pub8">For nearly four decades, Australia's domestic and international economic policies were anchored by the promotion of open, transparent, and rules-based market exchange. This was considered the best way to increase both Australia's prosperity and its security, and that belief guided Canberra's approach to economic statecraft. However, emerging concerns about the vulnerabilities arising from economic interdependence, and the increasingly blurry line between economics and security amid great power rivalry between China and the United States, have placed Australian policy orthodoxy in a difficult position. In this paper, we investigate how these dynamics are shaping change and continuity in Australia's economic statecraft, and in doing so offer three contributions. First, to advance the emerging comparative economic statecraft research agenda, we propose a modified concept of economic statecraft that captures a wider range of activities undertaken by non-great powers and a distinction between state-based and market-based actions which allows for within- and cross-case comparisons. Second, empirically, we sketch the historical evolution of Australia's approach and examine three salient domains in which it has recently pursued new economic statecraft initiatives. Finally, in evaluating recent change and continuity, our third contribution is to identify new variables that may illuminate the conditions under which states adapt their prevailing approach to economic statecraft.</div>
     </div>
@@ -393,9 +399,9 @@
       <div class="ptitle">Market Adjustments to Import Sanctions: Lessons from Chinese Restrictions on Australian Trade, 2020–21</div>
       <div class="venue"><em>Review of International Political Economy</em> (2023) 30:4 (with S Waldron, <a href="https://researchportalplus.anu.edu.au/en/persons/darren-lim/" target="_blank">D Lim</a>)</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub7')">abstract</span>
-        <a class="ext-link" href="https://www.tandfonline.com/doi/full/10.1080/09692290.2022.2090019" target="_blank">publisher's version</a>
-        <a class="ext-link" href="https://www.tandfonline.com/action/downloadSupplement?doi=10.1080%2F09692290.2022.2090019&file=rrip_a_2090019_sm4897.pdf" target="_blank">data</a>
+        <span class="toggle-link" onclick="toggle('pub7')">Abstract</span>
+        <a class="ext-link" href="https://www.tandfonline.com/doi/full/10.1080/09692290.2022.2090019" target="_blank">Publisher's Version (Open Access)</a>
+        <a class="ext-link" href="https://www.tandfonline.com/action/downloadSupplement?doi=10.1080%2F09692290.2022.2090019&file=rrip_a_2090019_sm4897.pdf" target="_blank">Data</a>
       </div>
       <div class="abstract-box" id="pub7">Under what conditions do high levels of export concentration in a single market generate vulnerability to coercive economic power? This paper investigates that question by examining the experiences of Australian export-oriented industries that lost access to the Chinese market during a sanctions episode beginning in May 2020. Despite China being a dominant and highly valuable export market for many affected industries, the economic – and accordingly political – impacts of sanctions were more modest than anticipated. We argue the reason for this lies in autonomous market adjustments. Theoretically, we extend insights from research on how market dynamics condition the impact of sanctions that generate 'supply shocks' (such as oil embargoes) to the new domain of 'demand shocks', and present a model of the process of responding to unilateral import sanctions from the perspective of target exporters. We argue impacts can be diminished by three mechanisms: reallocation (selling sanctioned products to alternative markets), deflection (circumventing sanctions via intermediaries), and transformation (adjusting production processes to produce and sell different products). Empirically, we document variation in adjustment processes undertaken in nine Australian industries, and explore the conditions under which adjustments are viable depending upon differences in market dynamics across products.</div>
     </div>
@@ -404,8 +410,8 @@
       <div class="ptitle">Economic Lawfare: The Logic and Dynamics of Using Law to Exercise Economic Power</div>
       <div class="venue"><em>International Studies Review</em> (2022) 24:3</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub6')">abstract</span>
-        <a class="ext-link" href="https://academic.oup.com/isr/article/doi/10.1093/isr/viac032/6618074" target="_blank">publisher's version</a>
+        <span class="toggle-link" onclick="toggle('pub6')">Abstract</span>
+        <a class="ext-link" href="https://academic.oup.com/isr/article/doi/10.1093/isr/viac032/6618074" target="_blank">Publisher's Version</a>
       </div>
       <div class="abstract-box" id="pub6">Unprecedented economic interdependence and the extensive legalization of international commerce have created unique opportunities for states to exercise power in world politics. Yet, while international relations (IR) scholars have revealed much about how interdependence conditions the ability of states to leverage economic relationships to influence other actors, the equivalent role of law has received less systematic attention. This article explains the logic and dynamics that inform how, why, and under what conditions states may use law as a sword or shield in the realm of international commerce. Drawing upon the IR literature on economic statecraft and the international law literature on lawfare, the article conceptualizes "economic lawfare" and uses it to elucidate how law may shape the use of economic power. It outlines a typology of pathways through which economic lawfare can be employed and their associated opportunities and constraints, before presenting a simple model of key dynamics that shape their use. That model's plausibility is probed and the pathways are empirically illustrated in two case studies of recent episodes in which the Chinese government has sought to manipulate international commerce for strategic purposes. The article clarifies the distinction between legal and nonlegal instruments of economic statecraft, offers a theoretically explicit account of key mechanisms through which law may condition the use of economic power, and provides new conceptual foundations for emerging research on how institutions shape the ability of states to intervene in markets to achieve strategic objectives.</div>
     </div>
@@ -414,9 +420,9 @@
       <div class="ptitle">Informal Economic Sanctions: The Political Economy of Chinese Coercion during the THAAD Dispute</div>
       <div class="venue"><em>Review of International Political Economy</em> (2022) 29:5 (with <a href="https://researchportalplus.anu.edu.au/en/persons/darren-lim/" target="_blank">D Lim</a>)</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub5')">abstract</span>
-        <a class="ext-link" href="https://www.tandfonline.com/doi/full/10.1080/09692290.2021.1918746" target="_blank">publisher's version</a>
-        <a class="ext-link" href="https://www.tandfonline.com/action/downloadSupplement?doi=10.1080%2F09692290.2021.1918746&file=rrip_a_1918746_sm5052.pdf" target="_blank">data</a>
+        <span class="toggle-link" onclick="toggle('pub5')">Abstract</span>
+        <a class="ext-link" href="https://www.tandfonline.com/doi/full/10.1080/09692290.2021.1918746" target="_blank">Publisher's Version (Open Access)</a>
+        <a class="ext-link" href="https://www.tandfonline.com/action/downloadSupplement?doi=10.1080%2F09692290.2021.1918746&file=rrip_a_1918746_sm5052.pdf" target="_blank">Data</a>
       </div>
       <div class="abstract-box" id="pub5">Contemporary economic coercion increasingly features the use of 'informal' sanctions—government-directed disruption of international commerce that is not enshrined in official laws or publicly acknowledged as coercive, yet which seeks to impose costs on key firms or industries in a target country in order to achieve strategic objectives. We investigate how 'informality' mediates the link between economic interdependence and coercive power, leveraging the most significant contemporary case of informal sanctions: China's apparent retaliation against South Korea's deployment of the terminal high-altitude area defense (THAAD) missile system between 2016 and 2017. We offer three contributions. First, we introduce a new qualitative dataset that carefully documents extensive evidence of the South Korean actors and industries that experienced disruption, the mechanisms through which disruption occurred, and its apparent impacts. Second, we use that evidence in a theory-testing exercise, evaluating the utility of hypotheses from the extant literature on formal sanctions in explaining how informal sanctions are used, and which industries they target. Finding the established wisdom offers some insight but only general expectations, our third contribution is theory development: we use the THAAD case as a heuristic to conceptualize informal economic sanctions, and specify two new variables—regulatory availability and opportunism—that mediate their use and impacts.</div>
     </div>
@@ -425,8 +431,8 @@
       <div class="ptitle">Outbound Tourism as an Instrument of Chinese Economic Statecraft</div>
       <div class="venue"><em>Journal of Contemporary China</em> (2020) 29:3 (with <a href="https://researchportalplus.anu.edu.au/en/persons/darren-lim/" target="_blank">D Lim</a>, R Bishop)</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub4')">abstract</span>
-        <a class="ext-link" href="https://www.tandfonline.com/doi/full/10.1080/10670564.2020.1744390" target="_blank">publisher's version</a>
+        <span class="toggle-link" onclick="toggle('pub4')">Abstract</span>
+        <a class="ext-link" href="https://www.tandfonline.com/doi/full/10.1080/10670564.2020.1744390" target="_blank">Publisher's Version</a>
       </div>
       <div class="abstract-box" id="pub4">China's growing economic strength provides Beijing with potent instruments of economic statecraft to pursue political and strategic objectives. Yet studies of economic power and Chinese economic statecraft tend to concentrate on trade in goods, outbound investment, and international institutions. This article broadens this research program into trade in services by focusing on China's outbound tourism sector. Drawing on a variety of Chinese and English language sources, the authors describe the history and structure of the domestic regulatory framework governing Chinese outbound tourism, before studying instances where the government has apparently intervened for strategic purposes. By unpacking how Chinese consumers arrange overseas holidays, this article provides insights into how the market structure of this service industry creates both opportunities for and constraints on China's economic power.</div>
     </div>
@@ -435,8 +441,8 @@
       <div class="ptitle">Toward a Geoeconomic World Order in International Trade and Investment</div>
       <div class="venue"><em>Journal of International Economic Law</em> (2019) 22:4 (with <a href="https://www.anthearoberts.com/" target="_blank">A Roberts</a>, HC Moraes)</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub3')">abstract</span>
-        <a class="ext-link" href="https://academic.oup.com/jiel/article-abstract/22/4/655/5637576" target="_blank">publisher's version</a>
+        <span class="toggle-link" onclick="toggle('pub3')">Abstract</span>
+        <a class="ext-link" href="https://academic.oup.com/jiel/article-abstract/22/4/655/5637576" target="_blank">Publisher's Version</a>
       </div>
       <div class="abstract-box" id="pub3">Recent developments suggest that the international economic order is transitioning away from the Neoliberal Order that has flourished for much of the post-Cold War period toward a new Geoeconomic Order. The shift to this new order, which is characterized by a growing 'securitisation of economic policy and economisation of strategic policy', will likely see the rules, norms, and institutions of international trade and investment law undergoing significant change. We expose the differences in the underlying logic of these orders, explore how this shift is being driven by the emerging USA–China tech/trade war, and consider the consequences of this transition for global economic governance.</div>
     </div>
@@ -445,8 +451,8 @@
       <div class="ptitle">Power in Australian Foreign Policy</div>
       <div class="venue"><em>Australian Journal of International Affairs</em> (2018) 72:4 (with <a href="https://researchportalplus.anu.edu.au/en/persons/darren-lim/" target="_blank">D Lim</a>)</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub2')">abstract</span>
-        <a class="ext-link" href="https://www.tandfonline.com/doi/abs/10.1080/10357718.2018.1484072" target="_blank">publisher's version</a>
+        <span class="toggle-link" onclick="toggle('pub2')">Abstract</span>
+        <a class="ext-link" href="https://www.tandfonline.com/doi/abs/10.1080/10357718.2018.1484072" target="_blank">Publisher's Version</a>
       </div>
       <div class="abstract-box" id="pub2">The 2017 Foreign Policy White Paper emphasises the importance of 'maximising' Australia's power and influence. However, the White Paper and much of the commentary on Australian foreign policy do not clearly conceptualise 'power' or indicate how it ought to be increased. The Lowy Institute's recent Asia Power Index implies one possible strategy via its resource-based approach to measuring power. We outline a different approach and argue that power should be conceptualised and evaluated as a specific relationship causing behavioural change, rather than as a general attribute of its wielder. To complement the Lowy Institute's carefully catalogued database, and facilitate a more focused conversation about maximising power and influence in Australian foreign policy, we offer a typology identifying five pathways through which states can translate their material and non-material resources into outcomes that serve the national interest.</div>
     </div>
@@ -455,8 +461,8 @@
       <div class="ptitle">Speaking with One Voice: Explaining Coherence in EU External Energy Security Policy</div>
       <div class="venue"><em>European Foreign Affairs Review</em> (2018) 23:4</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('pub1')">abstract</span>
-        <a class="ext-link" href="https://doi.org/10.54648/eerr2018039" target="_blank">publisher's version</a>
+        <span class="toggle-link" onclick="toggle('pub1')">Abstract</span>
+        <a class="ext-link" href="https://doi.org/10.54648/eerr2018039" target="_blank">Publisher's Version</a>
       </div>
       <div class="abstract-box" id="pub1">2017 saw an unusually high degree of coordination between the European Union (EU) and its Member States on external energy security policy. This is puzzling not only because it defies the expectations of critics who have long highlighted the failure of Member States to adopt coherent policies on the question of external energy security, but because individual Member States have strong incentives to adopt individualistic policies that undermine collective action in this policy area. This article seeks to answer two questions: how can coherence in EU external energy security policy be explained, and what does it suggest about the conditions under which the EU will be able to 'speak with one voice' in other contested external policy areas? In order to do so, I mine the existing literature for plausible explanations and identify and evaluate three separate narratives that rely on different causal mechanisms to explain greater coherence as a consequence of: (1) the gradual centralization of EU energy policy competence; (2) exogenous shocks to EU energy supply and; (3) institutional innovation under the Juncker Commission. I argue that none are independently sufficient to explain the phenomenon observed and present a novel 'synergetic account' that argues it was the unique interaction of each of the aforementioned factors that provided the conditions necessary for coherence, before concluding with a discussion of the implications of my findings for theory and policy.</div>
     </div>
@@ -469,11 +475,12 @@
 <!-- ── Working Papers ── -->
 <div id="working-papers" class="page">
   <div class="inner">
- <div class="paper">
+
+    <div class="paper">
       <div class="ptitle">Rallying-'round-the-Product? Consumer Responses to Economic Sanctions</div>
-      <div class="authors">with <a href="https://www.nazimurasdemir.com/">NU Demir</a> &mdash; Under Review</div>
+      <div class="authors">with <a href="https://www.nazimurasdemir.com/" target="_blank">NU Demir</a> &mdash; Under Review</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('abs2')">abstract</span>
+        <span class="toggle-link" onclick="toggle('abs2')">Abstract</span>
         <span style="font-size:13px; color:#555;">Presented at ISA 2025, APSA 2025, PIPCOSS (October 2025)</span>
       </div>
       <div class="abstract-box" id="abs2">How do consumers respond to coercive trade barriers? Governments in East Asia have recently encouraged citizens to support sanctioned domestic industries via positive political consumption. We adopt a quasi-experimental approach to look for evidence of such 'buycotts' and their correlates. Utilizing over three and a half million observations from daily sales data at markets across Taiwan, we use the generalized synthetic control method to identify buycott effects for every fruit and seafood product sanctioned by China between 2021–2024. We find domestic purchases of several products rose sharply, plausibly offsetting the loss of export revenue in the short-medium term. We then leverage product-level variation in buycott effects together with evidence of potential drivers of heterogeneity in buycott participation to test hypotheses about conditions under which consumers may 'rally-'round-the-product'. We find buycotts are positively correlated with elite cues and potential perceptions of peer participation, decline over time and as sanctions are extended to more products, and are stronger in the capital city region. Our findings have theoretical implications for scholarship on political consumerism, economic sanctions, and the relationship between conflict and commerce in world politics.</div>
@@ -481,9 +488,9 @@
 
     <div class="paper">
       <div class="ptitle">Indexing Sanctions: Chinese Public Opinion and Target State Perceptions of China's Sanction Threats</div>
-      <div class="authors">with <a href="https://www.lancaster.ac.uk/global-affairs/people/andrew-chubb">A Chubb</a> &mdash; Under Review</div>
+      <div class="authors">with <a href="https://www.lancaster.ac.uk/global-affairs/people/andrew-chubb" target="_blank">A Chubb</a> &mdash; Under Review</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('abs3')">abstract</span>
+        <span class="toggle-link" onclick="toggle('abs3')">Abstract</span>
         <span style="font-size:13px; color:#555;">Presented at ISA 2025</span>
       </div>
       <div class="abstract-box" id="abs3">When do targets perceive China is credibly resolved to impose economic sanctions? From a rationalist bargaining perspective, China's sanctioning behavior is puzzling: threats are often implicit, classic hand-tying actions like codifying sanctions into law are eschewed, and imposed sanctions are typically introduced discreetly and/or denied to be sanctions at all. Conventional theory suggests states should infer weakness, yet they frequently deem China resolved. Why? The few existing attempts to explain perceptions of credibility focus on China's capability and reputation – that Beijing can and has sanctioned before. We argue that while necessary, China's economic weight and track record are insufficient explanations of observers' perceptions of resolve. Targets do not automatically assume China will sanction in every case based on prior information, they also look for new information once a dispute arises. Drawing on Jervis's distinction between signals and indices, we theorise and probe the plausibility of one novel index of economic punishment: the activation of public opinion within China. Empirically, we first leverage a within-subject survey experiment measuring expert observers' estimations of the likelihood of China imposing economic punishment before and after Beijing activates public opinion in a crisis. The results suggest outbursts of patriotic public opinion have a strong positive effect on perceptions of threat credibility that cannot be fully explained by China's capabilities and interests, or theories of costly signaling. We then ground our arguments in a concrete case, drawing on interviews with expert analysts and advisers in South Korea to illustrate observers' perceptions of China's mobilization of anti-Korean nationalism during the 2016–2017 THAAD dispute. In doing so, we integrate insights from and extend emerging research agendas on coercive bargaining, economic sanctions and public opinion, and Chinese economic statecraft.</div>
@@ -491,9 +498,9 @@
 
     <div class="paper">
       <div class="ptitle">Consumers as Commercial Shields: Japanese Responses to China's Seafood Ban</div>
-      <div class="authors">with <a href="https://www.nazimurasdemir.com/">NU Demir</a> &mdash; Under Review</div>
+      <div class="authors">with <a href="https://www.nazimurasdemir.com/" target="_blank">NU Demir</a> &mdash; Under Review</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('abs4')">abstract</span>
+        <span class="toggle-link" onclick="toggle('abs4')">Abstract</span>
         <span style="font-size:13px; color:#555;">Presented at ISA Virtual 2025; Scheduled for MPSA 2026, APSA 2026</span>
       </div>
       <div class="abstract-box" id="abs4">Do consumers rally to protect domestic industries targeted by economic sanctions? In recent years, governments facing Chinese import bans have looked to mobilize individual consumers as 'commercial shields', encouraging consumption of sanctioned products in order to substitute lost exports. Drawing on the marketing science literature on political consumerism and international relations research on boycotts, we posit expectations about conditions under which consumers might heed such calls and engage in buycott activity. We then probe their utility by studying how consumers responded to import restrictions imposed by China on Japanese seafood products between 2023–2025. Utilizing results from a survey fielded in Japan in 2024 (n=4,108), monthly household survey data, and monthly data on the value and volume of sales at core seafood markets, we use interactive fixed effects estimation to identify relative buycott effects for products that the Japanese government singled out for consumer support. We find buycott effects are correlated with the volume of elite cues for different products and are shorter and sharper in metropolitan than non-metropolitan cities. Empirically, we present the first detailed account of the politics and economics of the China-Japan seafood dispute. Theoretically, we leverage it to identify conditions under which consumers may buycott to support sanctioned industries.</div>
@@ -501,9 +508,9 @@
 
     <div class="paper">
       <div class="ptitle">Mapping Economic Security Cooperation: The Economic Security Agreements (ECOSA) Dataset</div>
-      <div class="authors">with <a href="https://scholar.google.com/citations?user=n_EjiOYAAAAJ&hl=sv">V Bohman</a> &mdash; In Preparation</div>
+      <div class="authors">with <a href="https://scholar.google.com/citations?user=n_EjiOYAAAAJ&hl=sv" target="_blank">V Bohman</a> &mdash; In Preparation</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('abs5')">abstract</span>
+        <span class="toggle-link" onclick="toggle('abs5')">Abstract</span>
         <span style="font-size:13px; color:#555;">Presented at ISA 2024, ISA 2025</span>
       </div>
       <div class="abstract-box" id="abs5">Economic security has emerged as one of the headline policy agendas of contemporary world politics. While many states have developed new domestic strategies for pursuing their economic security objectives, there are clear limits to what can be achieved through unilateral action in a globalized economy. Accordingly, governments are increasingly turning to international partners and forming new agreements to deal with issues ranging from the stable supply of fertilizer to the resilience of deep-sea submarine cables, the collective deterrence of economic coercion and the 'friendshoring' of critical mineral supply chains. These new arrangements – which we term economic security agreements (ESAs) – are yet to be the subject of social scientific analysis. What substantive policy agendas are pursued under ESAs? Who is partnering with who? Under what conditions are ESAs formed? To begin answering these questions, we introduce a new resource documenting over 300 separate cooperative arrangements concluded between 2018 and 2025, organized as a time-series cross-section: the Economic Security Agreements dataset (ECOSA). This research note introduces the data, uses it to empirically map the emerging economic security cooperation landscape, and discusses how the data can be leveraged for both theory-building and theory-testing purposes to answer important questions at the intersection of international political economy and security studies.</div>
@@ -511,9 +518,9 @@
 
     <div class="paper">
       <div class="ptitle">Disasters and Inequality: Elite Capture of Post-Disaster Reconstruction</div>
-      <div class="authors">with <a href="https://xin-nong.com/">X Nong</a> &mdash; In Preparation</div>
+      <div class="authors">with <a href="https://xin-nong.com/" target="_blank">X Nong</a> &mdash; In Preparation</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('abs6')">abstract</span>
+        <span class="toggle-link" onclick="toggle('abs6')">Abstract</span>
         <span style="font-size:13px; color:#555;">Presented at JSQPS 2026</span>
       </div>
       <div class="abstract-box" id="abs6">Existing studies show that natural disasters exacerbate inequality by disproportionately harming the poor. This paper demonstrates that disasters can also worsen inequality from the opposite direction: by enriching elites. We argue that in institutional environments characterized by weak accountability and limited financial transparency, disaster relief and reconstruction funds are highly vulnerable to corruption and elite appropriation. Direct evidence is scarce because micro-level corruption data are unavailable. To overcome this challenge, we use web search frequencies for luxury brands as a proxy for elite purchasing power. Our research design combines within-country and cross-country comparisons, employing difference-in-differences and synthetic control methods. We present three findings. First, searches for high-end luxury bags (e.g., Louis Vuitton, Gucci) increased significantly in affected areas after the 2013 Ya'an earthquake in Sichuan, China. Second, searches for mid-tier brands (e.g., Kate Spade, Michael Kors) remained stable. Third, searches for luxury bags declined modestly in affected areas after Hurricane Katrina in the United States. These results suggest that the distributive consequences of natural disasters are shaped not only by differential exposure but also by institutional context.</div>
@@ -521,10 +528,10 @@
 
     <div class="paper">
       <div class="ptitle">Words Before Deeds: State Media Rhetoric and China's Use of Economic Sanctions</div>
-      <div class="authors">with <a href="https://matthewprobertson.com/">MP Robertson</a>, <a href="https://www.lancaster.ac.uk/global-affairs/people/andrew-chubb">A Chubb</a> &mdash; In Preparation</div>
+      <div class="authors">with <a href="https://matthewprobertson.com/" target="_blank">MP Robertson</a>, <a href="https://www.lancaster.ac.uk/global-affairs/people/andrew-chubb" target="_blank">A Chubb</a> &mdash; In Preparation</div>
       <div class="links">
-        <span class="toggle-link" onclick="toggle('abs7')">abstract</span>
-                <span style="font-size:13px; color:#555;">Scheduled for PIPCOSS (June 2026)</span>
+        <span class="toggle-link" onclick="toggle('abs7')">Abstract</span>
+        <span style="font-size:13px; color:#555;">Scheduled for PIPCOSS (June 2026)</span>
       </div>
       <div class="abstract-box" id="abs7">Does media rhetoric foreshadow China's use of economic coercion? While an emerging literature links Chinese state media discourse to subsequent military behavior, less is known about whether, how, and when such rhetoric might relate to China's use of economic sanctions. Drawing on complete corpora of People's Daily (1946–2025) articles and Global Times (1993–2025) editorials and an original dataset that identifies almost 300 Chinese sanctions imposed between 2000–2025, we seek to fill that gap. Empirically, we show that specific rhetorical configurations are associated with sanction imposition, and that this relationship varies across formal and informal sanctions. We also investigate whether threats in the more authoritative People's Daily have more forecasting value than those in the Global Times. Methodologically, we present a novel strategy for identifying cases in which Chinese sanctions were plausibly threatened but ultimately not imposed, an outcome that is largely missing from existing China datasets due to evidentiary obstacles that complicate identifying China's typically implicit threats. By illustrating the relationship between Chinese media rhetoric and patterns of economic coercion, we bridge research on Chinese political communication and international political economy, and contribute to scholarship on economic sanctions, coercive bargaining, and authoritarian signaling.</div>
     </div>
