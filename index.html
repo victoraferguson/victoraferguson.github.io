@@ -37,19 +37,24 @@
 
     /* ── Header ── */
  header {
-  padding: 1.5rem 0 0 0;
-  overflow: hidden;
+  padding: 1.5rem 0;
+  position: relative;
 }
 
 header .inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 1.5rem;
-  margin: 0 -3rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+}
+
+header .inner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 3rem;
+  right: 3rem;
+  height: 1px;
+  background: #e0e0e0;
 }
 
     header h1 {
