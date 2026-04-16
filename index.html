@@ -270,26 +270,27 @@ header .inner::after {
 
     /* ── Responsive ── */
     @media (max-width: 600px) {
-      .inner {
-        padding: 0 1.25rem;
-      }
-
-      header {
-        padding: 1rem 0;
-      }
-
-      header .inner::after {
+  .inner {
+    padding: 0 1.25rem;
+  }
+  header {
+    padding: 1rem 0;
+  }
+  header .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+  header .inner::after {
     width: 100%;
     left: 0;
     transform: none;
   }
-
-      header nav {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
+  header nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
       header nav a {
         font-size: 13px;
       }
