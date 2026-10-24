@@ -35,7 +35,6 @@
      * {       box-sizing: border-box;       margin: 0;       padding: 0;     }      body {       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;       font-size: 15px;       line-height: 1.7;       color: var(--text);       background: var(--bg);
       transition: background 0.2s ease, color 0.2s ease;     }      a {       color: var(--text);       text-decoration: none;     }      a:hover {       text-decoration: underline;     }      /* ── Shared max-width wrapper ── */     .inner {       max-width: 820px;       margin: 0 auto;       padding: 0 3rem;     }      /* ── Header ── */  header {   padding: 1.5rem 0;   position: relative; }  header .inner {   display: flex;   justify-content: space-between;   align-items: center; }  header .inner::after {   content: '';   position: absolute;   bottom: 0;   left: 50%;   right: auto;   transform: translateX(-50%);   width: calc(820px - 6rem);   height: 1px;   background: var(--border); }      header h1 {       font-size: 18px;       font-weight: 700;       color: var(--text);     }      header nav {       display: flex;       gap: 2rem;       align-items: center;     }      header nav a {       font-size: 14px;       color: var(--text-tertiary);       text-decoration: none;       cursor: pointer;     }      header nav a:hover {       color: var(--text);       text-decoration: underline;     }      header nav a.active {       font-weight: 600;       color: var(--text);     }      /* Home icon */     .home-icon {       display: flex;       align-items: center;       cursor: pointer;       color: var(--text-tertiary);       text-decoration: none !important;     }      .home-icon:hover {       color: var(--text);       text-decoration: none !important;     }      .home-icon.active {       color: var(--text);     }      .home-icon svg {       width: 17px;       height: 17px;       fill: currentColor;     }
 
-    /* ── Dark mode toggle ── */
     .theme-toggle {
       display: flex;
       align-items: center;
@@ -63,9 +62,8 @@
     [data-theme="dark"] .icon-sun { display: block; }
     [data-theme="dark"] .icon-moon { display: none; }
 
-      /* ── Pages ── */     .page {       display: none;       padding: 3rem 0 4rem;     }      .page.active {       display: block;     }      /* ── Home ── */     .home-bio {       display: flex;       gap: 2.5rem;       align-items: flex-start;     }      .home-bio-text p {       font-size: 15px;       line-height: 1.85;       margin-bottom: 1rem;       text-align: justify;     }      .home-bio-text p:last-child {       margin-bottom: 0;     }      .home-bio-text a {       color: var(--text);       text-decoration: underline;       text-decoration-color: var(--link-decoration);       text-underline-offset: 2px;     }      .home-bio-text a:hover {       color: var(--text-secondary);     }      .about-text a {       color: var(--text);       text-decoration: underline;       text-decoration-color: var(--link-decoration);       text-underline-offset: 2px;     }      .about-text a:hover {       color: var(--text-secondary);     }      .home-photo img {       width: 160px;       height: auto;       object-fit: cover;       object-position: top;       border-radius: 3px;       display: block;     }      /* ── About ── */     .about-text p {       font-size: 15px;       line-height: 1.85;       margin-bottom: 1rem;       text-align: justify;     }      .about-text p:last-child {       margin-bottom: 0;     }      /* ── Papers ── */     .paper {       margin-bottom: 1.75rem;     }      .paper .ptitle {       font-weight: 700;       font-size: 15px;       line-height: 1.5;     }      .paper .authors {       font-size: 13.5px;       color: var(--text-secondary);       margin-top: 0.15rem;     }      .paper .venue {       font-size: 13.5px;       color: var(--text-secondary);       margin-top: 0.1rem;     }      .paper .venue em {       color: var(--text-tertiary);       font-style: italic;     }      .paper .links {       margin-top: 0.4rem;       font-size: 13px;       display: flex;       gap: 0.5rem;       flex-wrap: wrap;       align-items: center;     }      .paper .links a,     .toggle-link {       color: var(--text-secondary);       text-decoration: none;     }      .paper .links a:hover,     .toggle-link:hover {       color: var(--text);     }      .toggle-link {       cursor: pointer;       font-size: 12px;     }      .toggle-link, .ext-link {  border: 1px dashed var(--toggle-border);   border-radius: 3px;   padding: 1px 5px;       font-size: 12px; }      .abstract-box {       background: var(--abstract-bg);       border-left: 3px solid var(--abstract-border);       padding: 0.75rem 1rem;       margin-top: 0.6rem;       font-size: 13.5px;       line-height: 1.75;       color: var(--text-tertiary);       display: none;       border-radius: 0 3px 3px 0;     }      .abstract-box.open {       display: block;     }      /* ── CV ── */     .cv-page .inner p {       font-size: 14px;     }
+       .page {       display: none;       padding: 3rem 0 4rem;     }      .page.active {       display: block;     }      /* ── Home ── */     .home-bio {       display: flex;       gap: 2.5rem;       align-items: flex-start;     }      .home-bio-text p {       font-size: 15px;       line-height: 1.85;       margin-bottom: 1rem;       text-align: justify;     }      .home-bio-text p:last-child {       margin-bottom: 0;     }      .home-bio-text a {       color: var(--text);       text-decoration: underline;       text-decoration-color: var(--link-decoration);       text-underline-offset: 2px;     }      .home-bio-text a:hover {       color: var(--text-secondary);     }      .about-text a {       color: var(--text);       text-decoration: underline;       text-decoration-color: var(--link-decoration);       text-underline-offset: 2px;     }      .about-text a:hover {       color: var(--text-secondary);     }      .home-photo img {       width: 160px;       height: auto;       object-fit: cover;       object-position: top;       border-radius: 3px;       display: block;     }      /* ── About ── */     .about-text p {       font-size: 15px;       line-height: 1.85;       margin-bottom: 1rem;       text-align: justify;     }      .about-text p:last-child {       margin-bottom: 0;     }      /* ── Papers ── */     .paper {       margin-bottom: 1.75rem;     }      .paper .ptitle {       font-weight: 700;       font-size: 15px;       line-height: 1.5;     }      .paper .authors {       font-size: 13.5px;       color: var(--text-secondary);       margin-top: 0.15rem;     }      .paper .venue {       font-size: 13.5px;       color: var(--text-secondary);       margin-top: 0.1rem;     }      .paper .venue em {       color: var(--text-tertiary);       font-style: italic;     }      .paper .links {       margin-top: 0.4rem;       font-size: 13px;       display: flex;       gap: 0.5rem;       flex-wrap: wrap;       align-items: center;     }      .paper .links a,     .toggle-link {       color: var(--text-secondary);       text-decoration: none;     }      .paper .links a:hover,     .toggle-link:hover {       color: var(--text);     }      .toggle-link {       cursor: pointer;       font-size: 12px;     }      .toggle-link, .ext-link {  border: 1px dashed var(--toggle-border);   border-radius: 3px;   padding: 1px 5px;       font-size: 12px; }      .abstract-box {       background: var(--abstract-bg);       border-left: 3px solid var(--abstract-border);       padding: 0.75rem 1rem;       margin-top: 0.6rem;       font-size: 13.5px;       line-height: 1.75;       color: var(--text-tertiary);       display: none;       border-radius: 0 3px 3px 0;     }      .abstract-box.open {       display: block;     }      /* ── CV ── */     .cv-page .inner p {       font-size: 14px;     }
 
-    /* ── Section headings (Research, Teaching) ── */
     .section-heading {
       font-size: 13px;
       font-weight: 600;
@@ -79,7 +77,6 @@
       margin-top: 2.75rem;
     }
 
-    /* ── Text left, photo right (About, Teaching) ── */
     .side-layout {
       display: flex;
       gap: 2.5rem;
@@ -111,7 +108,6 @@
       text-align: center;
     }
 
-    /* ── Row of photos (About) ── */
     .photo-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -158,8 +154,8 @@
       text-underline-offset: 2px;
     }
 
-      /* ── Responsive ── */   @media (max-width: 600px) {   .cv-page iframe {   display: none; }     .inner {     padding: 0 1.25rem;   }   header {     padding: 1rem 0;   }   header .inner {     flex-direction: column;     align-items: center;     gap: 0.4rem;   }   header .inner::after {     width: 100%;     left: 0;     transform: none;   }   header nav {     gap: 1rem;     flex-wrap: wrap;     justify-content: center;   }       header nav a {         font-size: 13px;       }        .home-bio {         flex-direction: column-reverse;         gap: 1.5rem;         align-items: center;       }        .home-bio-text {         width: 100%;         text-align: left;       }        .home-photo {         width: 100%;         display: flex;         justify-content: center;       }        .home-photo img {         width: 130px;         height: 165px;       }     }
-    /* ── Computer Modern (LaTeX) typography ── */
+      @media (max-width: 600px) {   .cv-page iframe {   display: none; }     .inner {     padding: 0 1.25rem;   }   header {     padding: 1rem 0;   }   header .inner {     flex-direction: column;     align-items: center;     gap: 0.4rem;   }   header .inner::after {     width: 100%;     left: 0;     transform: none;   }   header nav {     gap: 1rem;     flex-wrap: wrap;     justify-content: center;   }       header nav a {         font-size: 13px;       }        .home-bio {         flex-direction: column-reverse;         gap: 1.5rem;         align-items: center;       }        .home-bio-text {         width: 100%;         text-align: left;       }        .home-photo {         width: 100%;         display: flex;         justify-content: center;       }        .home-photo img {         width: 130px;         height: 165px;       }     }
+  
     @font-face { font-family: 'Computer Modern Serif'; src: url('fonts/cmunrm.woff') format('woff'); font-weight: normal; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Computer Modern Serif'; src: url('fonts/cmunbx.woff') format('woff'); font-weight: bold; font-style: normal; font-display: swap; }
     @font-face { font-family: 'Computer Modern Serif'; src: url('fonts/cmunti.woff') format('woff'); font-weight: normal; font-style: italic; font-display: swap; }
@@ -177,7 +173,6 @@
     .section-heading { font-size: 18px; font-weight: bold; text-transform: none; letter-spacing: 0; color: var(--text); }
     .side-photo figcaption, .photo-row figcaption { font-size: 12.5px; }
 
-    /* \texttt for nav and link boxes */
     header nav a, .toggle-link, .ext-link {
       font-family: 'Computer Modern Typewriter', 'Courier New', monospace;
     }
@@ -185,7 +180,7 @@
     header nav a:not(.home-icon) { position: relative; top: 1.5px; }
     .toggle-link, .ext-link { font-size: 12px; }
 
-    /* hyperref colorlinks: coloured text, no underline */
+  
     :root { --latex-link: #1a3fa8; }
     [data-theme="dark"] { --latex-link: #8fa9f0; }
     .home-bio-text a, .about-text a, .cv-page .inner p a,
@@ -226,12 +221,12 @@
       CV
      </a>
      <button aria-label="Toggle dark mode" class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
-      <!-- Moon icon (shown in light mode) -->
+     
       <svg class="icon-moon" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z">
        </path>
       </svg>
-      <!-- Sun icon (shown in dark mode) -->
+    
       <svg class="icon-sun" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
        <path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd">
        </path>
