@@ -65,6 +65,24 @@
 
       /* ── Pages ── */     .page {       display: none;       padding: 3rem 0 4rem;     }      .page.active {       display: block;     }      /* ── Home ── */     .home-bio {       display: flex;       gap: 2.5rem;       align-items: flex-start;     }      .home-bio-text p {       font-size: 15px;       line-height: 1.85;       margin-bottom: 1rem;       text-align: justify;     }      .home-bio-text p:last-child {       margin-bottom: 0;     }      .home-bio-text a {       color: var(--text);       text-decoration: underline;       text-decoration-color: var(--link-decoration);       text-underline-offset: 2px;     }      .home-bio-text a:hover {       color: var(--text-secondary);     }      .about-text a {       color: var(--text);       text-decoration: underline;       text-decoration-color: var(--link-decoration);       text-underline-offset: 2px;     }      .about-text a:hover {       color: var(--text-secondary);     }      .home-photo img {       width: 160px;       height: auto;       object-fit: cover;       object-position: top;       border-radius: 3px;       display: block;     }      /* ── About ── */     .about-text p {       font-size: 15px;       line-height: 1.85;       margin-bottom: 1rem;       text-align: justify;     }      .about-text p:last-child {       margin-bottom: 0;     }      /* ── Papers ── */     .paper {       margin-bottom: 1.75rem;     }      .paper .ptitle {       font-weight: 700;       font-size: 15px;       line-height: 1.5;     }      .paper .authors {       font-size: 13.5px;       color: var(--text-secondary);       margin-top: 0.15rem;     }      .paper .venue {       font-size: 13.5px;       color: var(--text-secondary);       margin-top: 0.1rem;     }      .paper .venue em {       color: var(--text-tertiary);       font-style: italic;     }      .paper .links {       margin-top: 0.4rem;       font-size: 13px;       display: flex;       gap: 0.5rem;       flex-wrap: wrap;       align-items: center;     }      .paper .links a,     .toggle-link {       color: var(--text-secondary);       text-decoration: none;     }      .paper .links a:hover,     .toggle-link:hover {       color: var(--text);     }      .toggle-link {       cursor: pointer;       font-size: 12px;     }      .toggle-link, .ext-link {  border: 1px dashed var(--toggle-border);   border-radius: 3px;   padding: 1px 5px;       font-size: 12px; }      .abstract-box {       background: var(--abstract-bg);       border-left: 3px solid var(--abstract-border);       padding: 0.75rem 1rem;       margin-top: 0.6rem;       font-size: 13.5px;       line-height: 1.75;       color: var(--text-tertiary);       display: none;       border-radius: 0 3px 3px 0;     }      .abstract-box.open {       display: block;     }      /* ── CV ── */     .cv-page .inner p {       font-size: 14px;     }
 
+    /* ── Section headings (Research, Teaching) ── */
+    .section-heading {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      margin-bottom: 1.25rem;
+    }
+
+    .section-heading:not(:first-child) {
+      margin-top: 2.75rem;
+    }
+
+    .paper.paper-compact {
+      margin-bottom: 1rem;
+    }
+
     .cv-page .inner p a {
       color: var(--text);
       text-decoration: underline;
@@ -91,11 +109,11 @@
      <a onclick="showPage('about', this)">
       About
      </a>
-     <a onclick="showPage('publications', this)">
+     <a onclick="showPage('research', this)">
       Research
      </a>
-     <a onclick="showPage('working-papers', this)">
-      Work in Progress
+     <a onclick="showPage('teaching', this)">
+      Teaching
      </a>
      <a onclick="showPage('cv', this)">
       CV
@@ -125,9 +143,6 @@
         Hitotsubashi University</a> and a Visiting Researcher at the <a href="https://esil.rcast.u-tokyo.ac.jp/experts/victor-ferguson/?" target="_blank">University of Tokyo</a>. My main research interest is the relationship between economic interdependence and power in world politics. 
         </p>
       <p>
-       Topics I am currently working on include the role(s) of ordinary citizens in economic statecraft, how security considerations are transforming patterns and forms of international economic cooperation, and the historical political economy of economic security in East Asia.
-      </p>
-      <p>
        I have <a href="https://scholar.google.com/citations?user=9XCtNeoAAAAJ&amp;hl=en" target="_blank">Google Scholar</a> and <a href="https://bsky.app/profile/victoraferguson.bsky.social" target="_blank">Bluesky</a>
        profiles. Here is my <a href="cv.pdf">CV</a>.
       </p>
@@ -146,6 +161,9 @@
       I am an Assistant Professor of International Relations at Hitotsubashi University's <a href="https://hri.ad.hit-u.ac.jp/html/100002372_profile_ja.html" target="_blank">Graduate School of Law</a> and a Visiting Researcher at the University of Tokyo's <a href="https://esil.rcast.u-tokyo.ac.jp/experts/victor-ferguson/?" target="_blank">Research Centre for Advanced Science and Technology</a>.
      </p>
      <p>
+      Topics I am currently working on include the role(s) of ordinary citizens in economic statecraft, how security considerations are transforming patterns and forms of international economic cooperation, and the historical political economy of economic security in East Asia.
+     </p>
+     <p>
       I received my PhD from the School of Politics and International Relations at the Australian National University's <a href="https://rsss.cass.anu.edu.au/" target="_blank">Research School of Social Sciences</a>. Prior to joining Hitotsubashi, I was a JSPS Postdoctoral Research Fellow at the University of Tokyo.
      </p>
      <p>
@@ -160,8 +178,8 @@
     </div>
    </div>
   </div>
-  <!-- ── Publications ── -->
-  <div class="page" id="publications">
+  <!-- ── Research ── -->
+  <div class="page" id="research">
    <div class="inner">
     <div class="paper">
      <div class="ptitle">
@@ -438,11 +456,9 @@
       2017 saw an unusually high degree of coordination between the European Union (EU) and its Member States on external energy security policy. This is puzzling not only because it defies the expectations of critics who have long highlighted the failure of Member States to adopt coherent policies on the question of external energy security, but because individual Member States have strong incentives to adopt individualistic policies that undermine collective action in this policy area. This article seeks to answer two questions: how can coherence in EU external energy security policy be explained, and what does it suggest about the conditions under which the EU will be able to 'speak with one voice' in other contested external policy areas? In order to do so, I mine the existing literature for plausible explanations and identify and evaluate three separate narratives that rely on different causal mechanisms to explain greater coherence as a consequence of: (1) the gradual centralization of EU energy policy competence; (2) exogenous shocks to EU energy supply and; (3) institutional innovation under the Juncker Commission. I argue that none are independently sufficient to explain the phenomenon observed and present a novel 'synergetic account' that argues it was the unique interaction of each of the aforementioned factors that provided the conditions necessary for coherence, before concluding with a discussion of the implications of my findings for theory and policy.
      </div>
     </div>
-   </div>
-  </div>
-  <!-- ── Working Papers ── -->
-  <div class="page" id="working-papers">
-   <div class="inner">
+    <h2 class="section-heading">
+     Work in Progress
+    </h2>
     <div class="paper">
      <div class="ptitle">
       Rallying-'round-the-Product? Consumer Responses to Economic Sanctions
@@ -588,6 +604,82 @@ When and why do targets perceive China is credibly resolved to impose economic s
      <figcaption style="margin-top: 0.5rem; font-size: 13px; color: #666; text-align: center;">
       Fieldwork in Taiwan, Spring 2025
      </figcaption>
+    </figure>
+   </div>
+  </div>
+  <!-- ── Teaching ── -->
+  <div class="page" id="teaching">
+   <div class="inner">
+    <h2 class="section-heading">
+     Instructor
+    </h2>
+    <div class="paper">
+     <div class="ptitle">
+      Power in International Relations
+     </div>
+     <div class="venue">
+      Hitotsubashi University (Undergraduate)
+     </div>
+     <div class="links">
+      <span class="toggle-link" onclick="toggle('course2')">
+       Course Overview
+      </span>
+      <a class="ext-link" href="syllabus_power.pdf" target="_blank">
+       Syllabus
+      </a>
+     </div>
+     <div class="abstract-box" id="course2">
+      Power is the most fundamental yet contested concept in international relations. Anyone reading the news in recent years will have observed that despite overwhelming resource advantages, large states cannot always get what they want. This course examines this puzzle and aims to equip students with the analytical tools to study and understand how power can be conceptualized, ‘measured’, and deployed. Drawing on foundational social science scholarship on the concept of power, we will develop an analytical framework for studying its use and examine specific mechanisms through which it can be employed, including military force, economic sticks and carrots, cyber coercion, information operations, ‘lawfare’, nuclear bargaining, agenda-setting through international institutions, and soft power. Along the way, we will use historical and contemporary case studies to assess both the limits and opportunities of different instruments of power, and to better appreciate why converting material capabilities into desired political outcomes remains one of the most central challenges of world politics.
+     </div>
+    </div>
+    <div class="paper">
+     <div class="ptitle">
+      Economic Security
+     </div>
+     <div class="venue">
+      Hitotsubashi University (Graduate and Undergraduate)
+     </div>
+     <div class="links">
+      <span class="toggle-link" onclick="toggle('course1')">
+       Course Overview
+      </span>
+      <a class="ext-link" href="syllabus_economicsecurity.pdf" target="_blank">
+       Syllabus
+      </a>
+     </div>
+     <div class="abstract-box" id="course1">
+      Economic security has emerged as one of the most prominent issues in world politics. After decades of focusing on maximizing the rewards of economic interdependence, policymakers around the globe are now scrambling to establish frameworks for managing its risks. Fortunately, scholars of international relations have been thinking about the intersection of economics, power, and security for a long time. This course seeks to introduce students to that scholarship, and how core theories, concepts, and analytical frameworks from the subfields of international political economy and security studies can be applied to understand the national security consequences arising from economic activity in a wide range of contemporary and historical cases.
+     </div>
+    </div>
+    <h2 class="section-heading">
+     Teaching Assistant
+    </h2>
+    <div class="paper paper-compact">
+     <div class="ptitle">
+      Geoeconomics and National Security
+     </div>
+     <div class="venue">
+      Australian National University (Graduate)
+     </div>
+    </div>
+    <div class="paper paper-compact">
+     <div class="ptitle">
+      Power and Influence in World Politics
+     </div>
+     <div class="venue">
+      Australian National University (Undergraduate)
+     </div>
+    </div>
+    <div class="paper paper-compact">
+     <div class="ptitle">
+      International Organization in World Politics
+     </div>
+     <div class="venue">
+      Australian National University (Undergraduate)
+     </div>
+    </div>
+    <figure style="margin-top: 2rem;">
+     <img alt="Victor A. Ferguson speaking at a lectern" src="teachingphoto.jpg" style="width: 90%; border-radius: 3px; display: block; margin: 0 auto;"/>
     </figure>
    </div>
   </div>
